@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{52FB6FFA-BC7
 		SDL2-2.24.2\lib\x86\SDL2.lib = SDL2-2.24.2\lib\x86\SDL2.lib
 		SDL2-2.24.2\lib\x86\SDL2main.lib = SDL2-2.24.2\lib\x86\SDL2main.lib
 		SDL2-2.24.2\lib\x86\SDL2test.lib = SDL2-2.24.2\lib\x86\SDL2test.lib
+		SDL2-2.24.2\lib\x64\SDL2_image.dll = SDL2-2.24.2\lib\x64\SDL2_image.dll
+		SDL2-2.24.2\lib\x64\SDL2_image.lib = SDL2-2.24.2\lib\x64\SDL2_image.lib
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{74242D9C-5222-444C-A5F7-DDEB6443C416}"
@@ -52,6 +54,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "include", "include", "{7424
 		SDL2-2.24.2\include\SDL_haptic.h = SDL2-2.24.2\include\SDL_haptic.h
 		SDL2-2.24.2\include\SDL_hidapi.h = SDL2-2.24.2\include\SDL_hidapi.h
 		SDL2-2.24.2\include\SDL_hints.h = SDL2-2.24.2\include\SDL_hints.h
+		SDL2-2.24.2\include\SDL_image.h = SDL2-2.24.2\include\SDL_image.h
 		SDL2-2.24.2\include\SDL_joystick.h = SDL2-2.24.2\include\SDL_joystick.h
 		SDL2-2.24.2\include\SDL_keyboard.h = SDL2-2.24.2\include\SDL_keyboard.h
 		SDL2-2.24.2\include\SDL_keycode.h = SDL2-2.24.2\include\SDL_keycode.h
@@ -117,6 +120,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{0C8E36B9-316
 		LICENSE.txt = LICENSE.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "optional", "optional", "{7BFF4A7E-FDC0-44BB-9F06-AD5600E54E64}"
+	ProjectSection(SolutionItems) = preProject
+		SDL2-2.24.2\lib\x64\optional\libtiff-5.dll = SDL2-2.24.2\lib\x64\optional\libtiff-5.dll
+		SDL2-2.24.2\lib\x64\optional\libwebp-7.dll = SDL2-2.24.2\lib\x64\optional\libwebp-7.dll
+		SDL2-2.24.2\lib\x64\optional\LICENSE.tiff.txt = SDL2-2.24.2\lib\x64\optional\LICENSE.tiff.txt
+		SDL2-2.24.2\lib\x64\optional\LICENSE.webp.txt = SDL2-2.24.2\lib\x64\optional\LICENSE.webp.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -140,6 +151,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{52FB6FFA-BC74-4972-8DEF-3E1CA0512AFD} = {70BB8C67-3869-40F1-A5AE-167B6C28336D}
 		{74242D9C-5222-444C-A5F7-DDEB6443C416} = {70BB8C67-3869-40F1-A5AE-167B6C28336D}
+		{7BFF4A7E-FDC0-44BB-9F06-AD5600E54E64} = {52FB6FFA-BC74-4972-8DEF-3E1CA0512AFD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F66ABF40-2597-48BC-AA03-7B2A7378FA76}

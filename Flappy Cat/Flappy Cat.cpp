@@ -2,10 +2,22 @@
 //
 
 #include <iostream>
+#include "src/GamePlay/GameLoop.hpp"
 
-int main()
+GameLoop* g = new GameLoop();
+
+int main(int argc, char** argv)
 {
-    std::cout << "Hello World!\n";
+    g->Init();
+
+    while (g->getGameState())
+    {
+        g->Render();
+        g->Event();
+    }
+    g->Clear();
+    
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

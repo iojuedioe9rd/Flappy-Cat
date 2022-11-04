@@ -29,6 +29,10 @@
 *.exe
 *.out
 *.app
+
+# dir
+/Flappy Cat/Debug
 /.vs/*
 /SDL2-2.24.2/cmake
 /SDL2-2.24.2/docs
+/Flappy Cat/x64
