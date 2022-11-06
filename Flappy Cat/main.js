@@ -1265,15 +1265,39 @@ var ASM_CONSTS = {
     }
 
   /** @type {function(...*):?} */
+  function __ZN8GameLoop12getGameStateEv(
+  ) {
+  err('missing function: _ZN8GameLoop12getGameStateEv'); abort(-1);
+  }
+
+  /** @type {function(...*):?} */
   function __ZN8GameLoop4InitEv(
   ) {
   err('missing function: _ZN8GameLoop4InitEv'); abort(-1);
   }
 
   /** @type {function(...*):?} */
+  function __ZN8GameLoop5ClearEv(
+  ) {
+  err('missing function: _ZN8GameLoop5ClearEv'); abort(-1);
+  }
+
+  /** @type {function(...*):?} */
+  function __ZN8GameLoop5EventEv(
+  ) {
+  err('missing function: _ZN8GameLoop5EventEv'); abort(-1);
+  }
+
+  /** @type {function(...*):?} */
   function __ZN8GameLoop6RenderEv(
   ) {
   err('missing function: _ZN8GameLoop6RenderEv'); abort(-1);
+  }
+
+  /** @type {function(...*):?} */
+  function __ZN8GameLoop6UpdateEv(
+  ) {
+  err('missing function: _ZN8GameLoop6UpdateEv'); abort(-1);
   }
 
   /** @type {function(...*):?} */
@@ -1401,8 +1425,12 @@ function checkIncomingModuleAPI() {
   ignoredModuleProp('fetchSettings');
 }
 var asmLibraryArg = {
+  "_ZN8GameLoop12getGameStateEv": __ZN8GameLoop12getGameStateEv,
   "_ZN8GameLoop4InitEv": __ZN8GameLoop4InitEv,
+  "_ZN8GameLoop5ClearEv": __ZN8GameLoop5ClearEv,
+  "_ZN8GameLoop5EventEv": __ZN8GameLoop5EventEv,
   "_ZN8GameLoop6RenderEv": __ZN8GameLoop6RenderEv,
+  "_ZN8GameLoop6UpdateEv": __ZN8GameLoop6UpdateEv,
   "_ZN8GameLoopC1Ev": __ZN8GameLoopC1Ev,
   "abort": _abort,
   "emscripten_resize_heap": _emscripten_resize_heap,

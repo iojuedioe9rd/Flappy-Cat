@@ -2,7 +2,6 @@
 
 #include<SDL.h>
 #include "../2D/Tex/TextureManager.hpp"
-#include "vec2.h"
 
 class GameLoop
 {
@@ -17,7 +16,7 @@ private:
 	Tex* player;
 	Tex* background;
 
-	vec2 playerPos;
+	
 	SDL_Rect srcPlayer, destPlayer;
 	int playerW = 60, playerH = 80;
 public:

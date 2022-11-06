@@ -154,16 +154,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Flappy Cat.cpp" />
+    <ClCompile Include="src\Player\Player.cpp" />
     <ClCompile Include="src\All\Object.cpp" />
     <ClCompile Include="src\GamePlay\GameLoop.cpp" />
     <ClCompile Include="src\2D\Tex\TextureManager.cpp" />
     <ClCompile Include="src\2D\Tex\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Player\Player.hpp" />
     <ClInclude Include="src\All\Object.hpp" />
     <ClInclude Include="src\GamePlay\GameLoop.hpp" />
     <ClInclude Include="src\2D\Tex\TextureManager.hpp" />
     <ClInclude Include="src\2D\Tex\Texture.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

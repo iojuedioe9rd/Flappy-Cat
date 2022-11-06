@@ -7,7 +7,7 @@ GameLoop::GameLoop()
 	window = NULL;
 	renderer = NULL;
 	GameState = false;
-	playerPos = vec2();
+	
 }
 
 bool GameLoop::getGameState()
@@ -22,13 +22,12 @@ void GameLoop::Update()
 	srcPlayer.x = srcPlayer.y - 0;
 
 	
-	playerPos.x = 10;
-	playerPos.y++;
+	destPlayer.x = 10;
+	destPlayer.y++;
 
 	destPlayer.w = playerW;
 	destPlayer.h = playerH;
-	destPlayer.x = playerPos.x;
-	destPlayer.y = playerPos.y;
+	
 
 }
 
