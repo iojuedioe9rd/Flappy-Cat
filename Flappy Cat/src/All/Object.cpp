@@ -11,7 +11,14 @@ void Object::Render()
 
 }
 
-void Object::CreateTexture(const char* address, SDL_Renderer* ren, Tex* tex)
+void Object::CreateTexture(const char* address, SDL_Renderer* ren)
 {
 	tex = TextureManager::Texture(address, ren);
 }
+
+Tex* Object::GetTex()
+{
+	return tex;
+}
+
+

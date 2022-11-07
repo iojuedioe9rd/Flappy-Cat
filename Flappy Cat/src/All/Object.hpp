@@ -5,11 +5,15 @@
 class Object
 {
 private:
-	SDL_Rect src, dest;
+	
 	Tex* tex;
 public:
 	void Render();
-	void CreateTexture(const char* address, SDL_Renderer* ren, Tex* tex);
+	void CreateTexture(const char* address, SDL_Renderer* ren);
+
+	Tex* GetTex();
+
+	SDL_Rect src, dest;
 
 	Object();
 

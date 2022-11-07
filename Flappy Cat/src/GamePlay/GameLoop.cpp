@@ -8,6 +8,7 @@ GameLoop::GameLoop()
 	renderer = NULL;
 	GameState = false;
 	
+	
 }
 
 bool GameLoop::getGameState()
@@ -17,16 +18,16 @@ bool GameLoop::getGameState()
 
 void GameLoop::Update()
 {
-	srcPlayer.h = playerH;
-	srcPlayer.w = playerW ;
-	srcPlayer.x = srcPlayer.y - 0;
+	p.src.h = playerH;
+	p.src.w = playerW ;
+	p.src.x = p.src.y - 0;
 
 	
-	destPlayer.x = 10;
-	destPlayer.y++;
+	p.dest.x = 10;
+	p.dest.y++;
 
-	destPlayer.w = playerW;
-	destPlayer.h = playerH;
+	p.dest.w = playerW;
+	p.dest.h = playerH;
 	
 
 }
@@ -47,7 +48,8 @@ void GameLoop::Init()
 
 		cout << "renderer and window is created!" << endl << "^_^"; 
 		GameState = true;
-		player = TextureManager::Texture("res/Cat.png", renderer);
+		p = Player();
+		p.CreateTexture("res/Cat.png", renderer);
 		background = TextureManager::Texture("res/Background.png", renderer);
 	}
 	else
@@ -79,7 +81,7 @@ void GameLoop::Render()
 {
 	SDL_RenderClear(renderer);
 	SDL_RenderCopy(renderer, background->tex, NULL, NULL);
-	SDL_RenderCopy(renderer, player->tex, &srcPlayer, &destPlayer);
+	SDL_RenderCopy(renderer, p.GetTex()->tex, &p.src, &p.dest);
 	
 	SDL_RenderPresent(renderer);
 
