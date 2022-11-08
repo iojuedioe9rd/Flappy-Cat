@@ -18,18 +18,19 @@ bool GameLoop::getGameState()
 
 void GameLoop::Update()
 {
-	p.src.h = playerH;
-	p.src.w = playerW ;
-	p.src.x = p.src.y - 0;
+	//p.src.h = playerH;
+	//p.src.w = playerW ;
+	//p.src.x = p.src.y - 0;
 
 	
-	p.dest.x = 10;
-	p.dest.y++;
+	//p.dest.x = 10;
+	//p.dest.y++;
 
-	p.dest.w = playerW;
-	p.dest.h = playerH;
+	//p.dest.w = playerW;
+	//p.dest.h = playerH;
 	
 
+	p.Update();
 }
 
 void GameLoop::Init()
@@ -50,7 +51,7 @@ void GameLoop::Init()
 		GameState = true;
 		p = Player();
 		p.CreateTexture("res/Cat.png", renderer);
-		background = TextureManager::Texture("res/Background.png", renderer);
+		b.CreateTexture("res/Background.png", renderer);
 	}
 	else
 	{
@@ -80,8 +81,8 @@ void GameLoop::Event()
 void GameLoop::Render()
 {
 	SDL_RenderClear(renderer);
-	SDL_RenderCopy(renderer, background->tex, NULL, NULL);
-	SDL_RenderCopy(renderer, p.GetTex()->tex, &p.src, &p.dest);
+	b.Render(renderer, b.GetTex());
+	p.Render(renderer);
 	
 	SDL_RenderPresent(renderer);
 

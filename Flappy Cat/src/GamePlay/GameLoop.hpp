@@ -3,6 +3,7 @@
 #include<SDL.h>
 #include "../2D/Tex/TextureManager.hpp"
 #include "../Player/Player.hpp"
+#include "../2D/Background.h"
 
 class GameLoop
 {
@@ -17,6 +18,7 @@ private:
 	
 	Tex* background;
 
+	Background b;
 	Player p;
 
 	

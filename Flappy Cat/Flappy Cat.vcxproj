@@ -153,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\2D\Background.cpp" />
     <ClCompile Include="Flappy Cat.cpp" />
     <ClCompile Include="src\Player\Player.cpp" />
     <ClCompile Include="src\All\Object.cpp" />
@@ -161,6 +162,7 @@
     <ClCompile Include="src\2D\Tex\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\2D\Background.h" />
     <ClInclude Include="src\Player\Player.hpp" />
     <ClInclude Include="src\All\Object.hpp" />
     <ClInclude Include="src\GamePlay\GameLoop.hpp" />

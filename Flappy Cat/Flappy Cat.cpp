@@ -8,6 +8,10 @@ GameLoop* g = new GameLoop();
 
 int main(int argc, char** argv)
 {
+    double first;
+    double last = 0;
+    
+
     g->Init();
 
     while (g->getGameState())
@@ -16,6 +20,13 @@ int main(int argc, char** argv)
         g->Render();
         g->Event();
         g->Update();
+        first = SDL_GetTicks();
+        if (first - last < 1)
+        {
+            SDL_Delay(1 / -(first - last));
+        }
+        std::cout << first - last << std::endl;
+        last = first;
     }
     g->Clear();
     
