@@ -4,6 +4,7 @@
 #include "../2D/Tex/TextureManager.hpp"
 #include "../Player/Player.hpp"
 #include "../2D/Background.h"
+#include <Timer.h>
 
 class GameLoop
 {

@@ -21,7 +21,7 @@ int main(int argc, char** argv)
         g->Event();
         g->Update();
         first = SDL_GetTicks();
-        if (first - last < 1)
+        if (first - last < 16.7)
         {
             SDL_Delay(1 / -(first - last));
         }
