@@ -3,11 +3,14 @@
 
 #include <iostream>
 #include "src/GamePlay/GameLoop.hpp"
+#include <Timer.hpp>
 
 GameLoop* g = new GameLoop();
 
 int main(int argc, char** argv)
 {
+    Timer* aTime = Timer::Instance();
+
     double first;
     double last = 0;
     
@@ -17,19 +20,31 @@ int main(int argc, char** argv)
     while (g->getGameState())
     {
         
+        aTime->Update();
+        
+
         g->Render();
         g->Event();
         g->Update();
         first = SDL_GetTicks();
-        if (first - last < 16.7)
+        
+        if (aTime->DeltaTime() >= (1.0f / 60))
         {
-            SDL_Delay(1 / -(first - last));
+            std::cout << aTime->DeltaTime() << std::endl;
+
+            
+
+            aTime->Reset();
+
+            SDL_Delay(aTime->DeltaTime() / 60);
         }
-        std::cout << first - last << std::endl;
+
         last = first;
     }
     g->Clear();
-    
+    Timer::Release();
+    aTime = NULL;
+
     return 0;
 }
 

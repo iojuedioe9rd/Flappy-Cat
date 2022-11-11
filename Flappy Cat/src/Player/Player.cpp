@@ -1,12 +1,18 @@
 
 #include "Player.hpp"
+#include <Timer.hpp>
 #ifdef RD
 
 
-
+Player::Player()
+{
+	g = .5;
+}
 void Player::Update()
 {
-	g = g + .5;
+	
+
+	g = g + (0.5 * Timer::Instance()->DeltaTime()) ;
 
 	src.x = 0;
 	src.y = 0;

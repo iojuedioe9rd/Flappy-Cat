@@ -1,5 +1,5 @@
 #pragma once
-#include "Timer.h"
+#include "Timer.hpp"
 #include <exception>
 #include <iostream>
 
@@ -57,6 +57,6 @@ float Timer::TimeScale()
 void Timer::Update()
 {
 	mElapsedTicks = SDL_GetTicks() - mStartTicks;
-	mDeltaTime = mElapsedTicks * .0001f;
+	mDeltaTime = mElapsedTicks * .001f;
 }
 
