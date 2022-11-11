@@ -1,18 +1,64 @@
 
 #include "Player.hpp"
 #include <Timer.hpp>
+#include <iostream>
 #ifdef RD
+
 
 
 Player::Player()
 {
-	g = .5;
+	
 }
-void Player::Update()
+
+void Player::G()
 {
+	if (isJumping)
+	{
+		accelerator1 = accelerator1 + 0.035;
+		accelerator2 = accelerator2 + 0.035;
+		jumpHeight = jumpHeight + g;
+		Ypos = Ypos + g + accelerator1 + accelerator2 + jumpHeight;
+
+		dest.x = 25;
+		dest.y = Ypos;
+		dest.w = 60;
+		dest.h = 80;
+	}
 	
 
-	g = g + (0.5 * Timer::Instance()->DeltaTime()) ;
+	Ypos = Ypos + (g);
+	dest.x = 25;
+	dest.y = Ypos;
+	dest.w = 60;
+	dest.h = 80;
+}
+
+void Player::Jump()
+{
+	if (jumpTimer - lastJump > 180)
+	{
+		accelerator1 = 0;
+		accelerator2 = 0;
+
+		isJumping = true;
+		lastJump = jumpTimer;
+	}
+	else
+	{
+		G();
+	}
+}
+
+
+
+void Player::Update()
+{
+	jumpTimer = SDL_GetTicks();
+
+	std::cout << g + (0.2 * Timer::Instance()->DeltaTime() * 10);
+
+	g = g + (0.2 *20 * Timer::Instance()->DeltaTime());
 
 	src.x = 0;
 	src.y = 0;
@@ -23,6 +69,8 @@ void Player::Update()
 	dest.y = g;
 	dest.w = 60;
 	dest.h = 80;
+
+	G();
 }
 
 void Player::Render(SDL_Renderer* ren)

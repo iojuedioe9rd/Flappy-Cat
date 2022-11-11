@@ -36,7 +36,7 @@ int main(int argc, char** argv)
 
             aTime->Reset();
 
-            SDL_Delay(aTime->DeltaTime() / 60);
+            SDL_Delay(aTime->DeltaTime());
         }
 
         last = first;

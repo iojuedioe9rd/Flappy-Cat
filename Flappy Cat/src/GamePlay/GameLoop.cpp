@@ -2,13 +2,13 @@
 #include <iostream>
 using namespace std;
 
+
+
 GameLoop::GameLoop()
 {
 	window = NULL;
 	renderer = NULL;
 	GameState = false;
-	
-	
 }
 
 bool GameLoop::getGameState()
@@ -36,7 +36,7 @@ void GameLoop::Update()
 void GameLoop::Init()
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
-	window = SDL_CreateWindow("Flappy Cat", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, SDL_WINDOW_RESIZABLE);
+	window = SDL_CreateWindow("Flappy Cat", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL);
 	if (window)
 	{
 		renderer = SDL_CreateRenderer(window, -1, 0);
@@ -49,7 +49,7 @@ void GameLoop::Init()
 
 		cout << "renderer and window is created!" << endl << "^_^"; 
 		GameState = true;
-		p = Player();
+		
 		p.CreateTexture("res/Cat.png", renderer);
 		b.CreateTexture("res/Background.png", renderer);
 	}

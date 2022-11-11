@@ -56,7 +56,7 @@ float Timer::TimeScale()
 
 void Timer::Update()
 {
-	mElapsedTicks = SDL_GetTicks() - mStartTicks;
+	mElapsedTicks = SDL_GetTicks64() - mStartTicks;
 	mDeltaTime = mElapsedTicks * .001f;
 }
 
