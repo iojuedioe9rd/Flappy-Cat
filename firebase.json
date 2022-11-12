@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "flappy-cats123",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
