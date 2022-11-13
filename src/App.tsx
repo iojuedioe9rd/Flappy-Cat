@@ -3,12 +3,24 @@
 import React from 'react';
 import Game from './Game'
 import styled from 'styled-components';
+import GameProps from './Game'
+let j = false;
 
 
 function App() {
+  //
+
+  j = false;
+
+  const onClick = () => {
+    console.log("Click");
+    j = true;
+  }
   return (
     <div className="App">
       
+      
+
       <Div>
         <Game/>
       </Div>
@@ -24,7 +36,14 @@ const Div = styled.div`
 `;
 
 export default App;
-
+export function jc()
+{
+  return j;
+}
+export function setJc(jc : boolean)
+{
+  j = jc;
+}
 
 
 
