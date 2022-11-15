@@ -1,0 +1,2 @@
+npm run ogBuild
+serve -s build
