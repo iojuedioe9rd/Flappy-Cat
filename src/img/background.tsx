@@ -1,3 +1,5 @@
+import {useDisplayName} from '../Hooks/HooksMain'
+
 import * as React from "react";
 /* SVGR has dropped some elements not supported by react-native-svg: title */
 import { Component } from 'react';
@@ -8,9 +10,11 @@ interface BackgroundProps {
   height: number;
 }
 
-export default function Background<BackgroundProps>(props){
+export default function Background<BackgroundProps>(props) {
+  
+  useDisplayName("Background")
     return (
-      <div className="Background">
+      <div className="Background" style={{overflow: "hidden"}} >
         
          <svg
     xmlns="http://www.w3.org/2000/svg"

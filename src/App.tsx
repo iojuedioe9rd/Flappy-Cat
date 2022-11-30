@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // who make this horrible code
 
 import React from 'react';
@@ -17,7 +18,7 @@ function App() {
     j = true;
   }
   return (
-    <div className="App">
+    <div className="App" >
       
       
 
@@ -33,6 +34,16 @@ const Div = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  overflow: hidden;
+  
+
+  & span {
+    
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    font-family: 'Brush Script MT', cursive;
+  }
 `;
 
 export default App;

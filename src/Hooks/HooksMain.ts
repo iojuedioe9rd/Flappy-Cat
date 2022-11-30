@@ -8,11 +8,10 @@ export function useDisplayName(V : string)
     useEffect(() => {
         const data = V
         setDisplayName(data);
-    }, [])
+    }, [V])
 
     useDebugValue(displayName ?? "loading")
 
     return displayName;
 }
-
 

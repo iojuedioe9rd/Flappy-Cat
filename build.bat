@@ -1,3 +1,3 @@
 @echo off
 call npm run ogBuild
-serve -s build
+call serve -s build

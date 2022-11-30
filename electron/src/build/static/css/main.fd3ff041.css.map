@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.fd3ff041.css","mappings":"AAAA,WAEI,YAAa,CADb,WAEJ,CCHA,MAEI,WAAY,CADZ,UAEJ","sources":["Game.css","css/main.css"],"sourcesContent":["Background {\r\n    width: 500px;\r\n    height: 500px;\r\n}\r\n\r\n","Input {\r\n    width: 100%;\r\n    height: 100%;\r\n}"],"names":[],"sourceRoot":""}

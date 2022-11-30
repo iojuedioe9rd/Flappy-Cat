@@ -1,15 +1,18 @@
+/* eslint-disable @typescript-eslint/no-redeclare */
 import React from 'react'
 import styled from 'styled-components';
-
+import { useDisplayName } from './Hooks/HooksMain'
 
 export default function Obstacle<ObstacleProps>(ObstacleProps) {
+  useDisplayName("Obstacle")
   return (
-      <div className="Obstacle">
+    <>
+      
           <ObstacleStyled
             top={ObstacleProps.top}
             width={ObstacleProps.width}
             height={ObstacleProps.height}
-            left={ObstacleProps.left} /></div>
+            left={ObstacleProps.left} /></>
   )
 }
 interface ObstacleProps {

@@ -7,6 +7,13 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <div style={{ background: "#252525"}}>
+      <App />
+    </div>
+    
+    <div>
+      <div style={{visibility: 'hidden'}}>joe mama</div>
+    </div>
+    
   </React.StrictMode>
 );
